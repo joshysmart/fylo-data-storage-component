@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+ box-sizing: border-box;
+ --Gradient: #ffa399;
+ --Gradient-right: hsl(335, 100%, 65%);
+ --Pale-Blue: hsl(243, 100%, 93%);
+ --Grayish-Blue: hsl(229, 7%, 55%);
+ --Dark-Blue: hsl(228, 56%, 26%);
+ --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ color: var(--Grayish-Blue);
+ Font-size: 14px;
+ font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+ width: 100%;
+ background-image: url('./images/bg-mobile.png');
+ background-repeat: no-repeat;
+ background-size: cover; 
+}
+
+@media only screen and (min-width: 1024px) {
+ .wrapper {
+  background: var(--Very-Dark-Blue);
+ } 
+}
+
+@media only screen and (min-width: 1024px) {
+ .wrapper:after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+  content: ''; 
+  background-image: url('./images/bg-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+ } 
+}
+
+.container {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-bottom: 50px;
+}
+
+.container .app-container{
+ display: flex;
+ flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+ .container .app-container{
+  flex-direction: row;
+ }
+}
+
+.container .app-container .file {
+ width: 100%;
+ padding: 30px;
+ border-radius: 10px 80px 10px 10px;
+ background: var(--Dark-Blue);
+ z-index: 2;
+}
+
+@media only screen and (min-width: 1024px) {
+ .container .app-container .file {
+  width: 350px;
+  margin-right: 50px;
+ }
+}
+
+.container .app-container .file  .icon-container {
+ display: flex;
+ margin-top: 30px;
+ align-items: center; 
+}
+
+.container .app-container .file  .icon {
+ width: 50px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-right: 20px;
+ border-radius: 10px;
+ background: var(--Very-Dark-Blue);
+}
+
+.container .app-container .storage {
+ width: 100%;
+ position: relative;
+ align-self: flex-end;
+ padding: 30px;
+ padding-bottom: 50px;
+ background: var(--Dark-Blue);
+ border-radius: 10px;
+ margin-top: 20px;
+ text-align: center;
+ z-index: 2;
+}
+
+@media only screen and (min-width: 1024px) {
+ .container .app-container .storage {
+  width: 500px;
+  text-align: left;
+  padding-bottom: 30px;
+ }
+}
+
+
+.container .app-container .storage .left {
+ position: absolute;
+ right: 18%;
+ /* right: 50px; */
+ top: 135px;
+ padding: 15px 30px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background: #fff;
+ border-radius: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+ .container .app-container .storage .left {
+  right: 30px;
+  top: -40px; 
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+ .container .app-container .storage .left:after {
+  position: absolute;
+  content: '';
+  bottom: -20px;
+  right: 0;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid #fff;
+ }
+}
+
+
+
+.container .app-container .storage .left span {
+ color: #000;
+ margin-right: 5px;
+ font-size: 2.5em;
+ font-weight: 700;
+}
+
+.container .app-container .storage .progress {
+ width: 100%;
+ margin: 20px 0;
+ margin-left: 5px;
+ background: var(--Very-Dark-Blue);
+ border-radius: 8px;
+}
+
+.container .app-container .storage span {
+ color: #fff;
+}
+
+.container .app-container .storage .capacity {
+ display: flex;
+ justify-content: space-between;
+}
+
+.container .app-container .storage .progress-bar {
+ width: 81%;
+ position: relative;
+ padding: 8px;
+ border-radius: 8px;
+ background-image: linear-gradient(to right, #ffa399, #ff4d97);
+}
+
+.container .app-container .storage .progress-bar:after {
+ position: absolute;
+ right: 2px;
+ top: 0;
+ padding: 8px;
+ content: '';
+ background: #fff;
+ border-radius: 50%;
+}
+
