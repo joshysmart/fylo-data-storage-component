@@ -20,4 +20,4 @@ Your users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-Solution (published at](https://fylo-data-storage-component-mocha-five.vercel.app/)
+Solution [published at](https://fylo-data-storage-component-mocha-five.vercel.app/)
